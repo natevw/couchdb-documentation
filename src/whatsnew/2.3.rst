@@ -230,6 +230,12 @@ Bugfixes
   populated with valid values.
 * :ghissue:`1717`: If the ``.ini`` config file is read only, an attempt to update the
   config through the HTTP API will now result in a proper ``eacces`` error response.
+* :ghissue:`1603`: CouchDB now returns the correct ``total_rows`` result when querying
+  ``/{db}/_design_docs``.
+* :ghissue:`1629`: Internal load validation functions no longer incorrectly hold open
+  a deleted database or its host process.
+* :ghissue:`1746`: Server admins defined in the ini file accessing via HTTP API no longer
+  result in the auth cache logging the access as a miss in the statistics.
 
 Mango
 -----
